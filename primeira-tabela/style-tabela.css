@@ -1,0 +1,61 @@
+:root {
+    --cor-primaria: rgb(71, 49, 49);
+    --cor-secundaria: rgb(208, 194, 194);
+    --cor-terciaria: rgba(71, 49, 49, 0.548);
+    --cor-quaternaria: rgba(71, 49, 49, 0.727);
+}
+
+body{
+    background-image: url(assets/background.jpeg);
+    background-repeat: space;
+    background-size: 100px 50px;
+    display: flex;
+}
+
+nav {
+    width: 20%;
+    min-width: 5%;
+}
+aside {
+    width: 20%;
+    min-width: 5%;
+
+}
+
+main {
+    width: 60%;
+    max-width: 90%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, p{
+    color: rgb(71, 49, 49);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+td, th{
+    border: 2px solid var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    color: aliceblue;
+    font-size: 20;
+    text-align: center;
+}
+
+.produto:hover td{
+    font-size: large;
+    background-color: var(--cor-quaternaria);
+    border-collapse: collapse;
+}
+
+.cabecalho, td[colspan], td[rowspan] {
+    background-color: var(--cor-primaria);
+}

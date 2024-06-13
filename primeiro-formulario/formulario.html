@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form-style.css">
+  <title>Formulário</title>
+</head>
+<body>
+
+  <h2>Inscrição para vaga de emprego</h2>
+
+  <form action="/submit_form.php" method="post" enctype="multipart/form-data">
+
+    <fieldset class="dados-pessoais">
+      <legend><strong>Dados Pessoais:</strong></legend>
+
+      <label for="name">Nome Completo:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="birthdate">Data de Nascimento:</label>
+      <input type="date" id="birthdate" name="birthdate">
+      
+      <label class="gender" for="gender">Gênero:</label>
+          <label class="input-box">
+              <input type="radio" name="gender" value="masculino"> Masculino
+          </label>
+          <label class="input-box">
+              <input type="radio" name="gender" value="feminino"> Feminino
+          </label>
+          <label class="input-box">
+              <input type="radio" name="gender" value="outro"> Outro
+          </label>
+
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+    </fieldset>
+
+    <fieldset class="experiencia">
+      <legend><strong>Experiêcia Profissional:</strong></legend>
+
+      <label for="lcargo">Último cargo ocupado:</label>
+      <input type="text" id="lcargo" name="lcargo" required>
+     
+
+      <label for="lempresa">Empresa Anterior:</label>
+      <input type="text" id="lempresa" name="lempresa" required>
+      
+
+      <label for="start-date">Data de Início do contrato:</label>
+      <input type="date" id="start-date" name="start-date" required>
+    
+
+      <label for="end-date">Data de Encerramento do contrato:</label>
+      <input type="date" id="end-date" name="end-date" required>
+     
+
+      <label for="area">Área de Atuação:</label>
+     
+      <label class="input-box" for="marketing">
+        <input type="checkbox" id="marketing" name="specialization" value="marketing"> Marketing
+      </label>
+     
+      <label class="input-box" for="finance">
+        <input type="checkbox" id="finance" name="specialization" value="finance"> Finanças
+      </label>
+     
+      <label class="input-box" for="hr">
+        <input type="checkbox" id="hr" name="specialization" value="hr"> Recursos Humanos
+      </label>
+     
+      <label class="input-box" for="design">
+        <input type="checkbox" id="design" name="specialization" value="design"> Design
+      </label>
+     
+    </fieldset>
+    
+    <fieldset class="formacao">
+      <legend><strong>Educação:</strong></legend>
+
+      <label for="educacao-nivel">Nível de Escolaridade:</label>
+      <select id="educacao-nivel" name="educacao-nivel" required>
+        <option value="" disabled selected>Selecione seu nível de escolaridade</option>
+        <option value="fundamental">Ensino Fundamental</option>
+        <option value="medio">Ensino Médio</option>
+        <option value="tecnico">Ensino Técnico</option>
+        <option value="graduacao">Graduação</option>
+        <option value="pos-graduacao">Pós-Graduação</option>
+      </select>
+     
+
+      <label for="instituicao">Instituição de Ensino:</label>
+      <input type="text" id="instituicao" name="instituicao" required>
+     
+
+      <label for="curso">Curso:</label>
+      <input type="text" id="curso" name="curso" required>
+     
+
+      <label for="data-conclusao">Data de Conclusão do Curso:</label>
+      <input type="date" id="data-conclusao" name="data-conclusao" required>
+     
+    </fieldset>
+
+    <fieldset class="anexo">
+      <legend><strong>Anexo de Documentos:</strong></legend>
+      
+      <label for="curriculo">Currículo:</label>
+      <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+     
+      
+      <label for="carta-apresentacao">Carta de apresentação:</label>
+      <input type="file" id="carta-apresentacao" name="carta-apresentacao" accept=".pdf,.doc,.docx" required>
+     
+      
+      <label for="fotografia">Fotografia recente:</label>
+      <input type="file" id="fotografia" name="fotografia" accept="image/*" required>
+    </fieldset>
+
+    <fieldset class="motivacao-perspectiva">
+      <legend><strong>Motivação e Perspectivas:</strong></legend>
+      
+      <label for="motivacao">Por que quero este emprego?</label>
+     
+      <textarea id="motivacao" name="motivacao" rows="10" cols="100" required></textarea>
+     
+      
+      <label for="salario">Salário almejado (R$ 1000 - R$ 5000):</label>
+      <input type="range" id="salario" name="salario" min="1000" max="5000" step="100" oninput="document.getElementById('salario-value').textContent = this.value;">
+      <span id="salario-value">3000</span>
+    </fieldset>
+
+    <fieldset class="envio">
+      <legend><strong>Confirmação:</strong></legend>
+      
+      <label class="input-box" for="confirmacao">
+        <input type="checkbox" id="confirmacao" name="confirmacao" required> Confirmo que todas as informações estão corretas
+      </label>
+     
+      
+      <input type="submit" value="Enviar">
+    </fieldset>
+
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('salario-value').textContent = document.getElementById('salario').value;
+    });
+  </script>
+  
+</body>
+</html>

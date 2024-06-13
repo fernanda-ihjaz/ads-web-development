@@ -1,0 +1,52 @@
+body {
+    position: relative;
+    color: aliceblue;
+    background-image: url('assets/studying.jpg');
+    background-repeat: repeat;
+    background-size: 33%;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+  }
+
+body::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+fieldset {
+  content: "";
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+input, label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-box {
+  display: block;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.input-box > input {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 5%;
+  gap: 20px;
+}

@@ -1,0 +1,75 @@
+:root{
+    --tam-header: 15vh;
+    --tam-footer:10vh;
+    --tam-conteudo:75vh;
+}
+
+*{
+    margin: 0;
+}
+
+.layout-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-principal > header{
+    height: var(--tam-header);
+    background-color: rgb(201, 104, 201);
+}
+
+.layout-principal > footer{
+    height: var(--tam-footer);
+    background-color: rgb(201, 104, 201);
+}
+.layout-principal > div.conteudo{
+    height: var(--tam-conteudo);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo > nav{
+    height: calc(var(--tam-conteudo) - 5vh);
+    width: 15%;
+    background-color: rgb(106, 104, 201);
+    z-index: 1;
+}
+
+.conteudo > aside{
+    height: calc(var(--tam-conteudo) - 5vh);
+    width: 15%;
+    background-color: rgb(106, 104, 201);
+    z-index: 1;
+}
+
+.conteudo > main{
+    height: calc(var(--tam-conteudo) - 5vh);
+    width: 67.5%;
+    z-index: 1;
+}
+
+.conteudo > main > div.banner{
+    height: 30%;
+    width: 100%;
+    background-color:rgb(26, 140, 182);
+    z-index: 1;
+}
+
+.conteudo > main > div.espaco{
+    height: 5%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.conteudo > main > div.main-conteudo{
+    height: 65%;
+    width: 100%;
+    background-color:rgb(104, 143, 201);
+    z-index: 1;
+}
+
+
