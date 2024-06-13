@@ -1,0 +1,150 @@
+:root{
+    --cor-fundo-botao-nr: rgb(200, 147, 205, 0.571);
+    --cor-fundo-botao-op: rgba(175, 140, 245, 0.571);
+    --cor-fundo-botao-eq: rgba(135, 196, 244, 0.571);
+    --cor-fundo-botao-tela: rgba(240, 248, 255, 0.662);
+}
+
+body {
+    background-image: url(assets/background.jpeg);
+    background-size: 25%;
+}
+
+.estrutura {
+    background-color: rgba(121, 74, 160, 0.484);
+    height: 500px;
+    width: 300px;
+    display: grid;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "tela tela tela tela"
+        "bt7 bt8 bt9 div"
+        "bt4 bt5 bt6 mult"
+        "bt1 bt2 bt3 minus"
+        "bt0 point equals plus"
+        "detetar left right right";
+    gap: 15px;
+    margin-top: 5%;
+}
+
+.botao {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 5px 4px 25px 15px rgba(0,0,0,0.1);
+    font-size: 50pt;
+    text-align: center;
+    color: white;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tela {
+    background-color: var(--cor-fundo-botao-tela);
+    text-align: right;
+    color: rgba(0, 0, 0, 0.726);
+    overflow: hidden;
+    font-size: 40pt;
+}
+
+.botao-nr {
+    background-color: var(--cor-fundo-botao-nr);
+}
+
+.botao-op {
+    background-color: var(--cor-fundo-botao-op);
+}
+
+.botao-eq {
+    background-color: var(--cor-fundo-botao-eq);
+}
+
+.botao-extra {
+    background-color: var(--cor-fundo-botao-op);
+    font-size: 30pt;
+}
+
+#tela {
+    grid-area: tela;   
+}
+
+#btn-eq {
+    grid-area: equals;
+}
+
+#btn-plus {
+    grid-area: plus;
+}
+
+#btn-minus {
+    grid-area: minus;
+}
+
+#btn-div {
+    grid-area: div;
+}
+
+#btn-mult {
+    grid-area: mult;
+}
+
+#btn-2 {
+    grid-area: bt2;
+}
+
+#btn-1 {
+    grid-area: bt1;
+}
+
+#btn-3 {
+    grid-area: bt3;
+}
+
+#btn-4 {
+    grid-area: bt4;
+}
+
+#btn-5 {
+    grid-area: bt5;
+}
+
+#btn-6 {
+    grid-area: bt6;
+}
+
+#btn-7 {
+    grid-area: bt7;
+}
+
+#btn-8 {
+    grid-area: bt8;
+}
+
+#btn-9 {
+    grid-area: bt9;
+}
+
+#btn-0 {
+    grid-area: bt0;
+}
+
+#btn-point {
+    grid-area: point;
+}
+
+#btn-detetar {
+    grid-column: 4;
+}
+
+#btn-left {
+    grid-area: left;
+    grid-column: 1;
+}
+
+#btn-right {
+    grid-area: right;
+    grid-column: 2;
+}
